@@ -1,4 +1,4 @@
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -23,3 +23,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// https://docs.microsoft.com/en-us/learn/modules/build-web-api-aspnet-core/4-aspnet-controllers
+
