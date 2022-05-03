@@ -11,9 +11,7 @@ namespace Projects.Controllers
 	{
 		public PizzaController()
 		{
-
-			// https://docs.microsoft.com/en-us/learn/modules/build-web-api-aspnet-core/7-crud
-
+// https://docs.microsoft.com/en-us/learn/modules/build-web-api-aspnet-core/8-exercise-implement-crud
 		}
 
 		// crud create read update delete
@@ -46,7 +44,7 @@ namespace Projects.Controllers
         }
 
 
-		[HttpPut("{id}")]
+		[HttpPut("{id_pizza}")]
 		public IActionResult Update(int id_pizza, Pizza updated_pizza)
 		{
             if ( id_pizza != updated_pizza.Id )
@@ -54,7 +52,7 @@ namespace Projects.Controllers
 				return BadRequest();
             }
 			var already_exist_pizza = PizzaService.Get(id_pizza);
-			if (already_exist_pizza == null) // if (already_exist_pizza is null)
+			if (already_exist_pizza is null) // if (already_exist_pizza == null)
 			{
 				return NotFound();
             }
@@ -63,12 +61,12 @@ namespace Projects.Controllers
 		}
 
 
-		[HttpDelete]
+		[HttpDelete("{id_pizza}")]
 		public IActionResult Delete(int id_pizza)
 		{
 			var already_exist_pizza = PizzaService.Get(id_pizza);
-			if(already_exist_pizza == null)
-            {
+			if(already_exist_pizza is null) // if(already_exist_pizza == null)
+			{
 				return NotFound();
             }
 			PizzaService.Delete(id_pizza);
