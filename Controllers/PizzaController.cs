@@ -11,7 +11,10 @@ namespace Projects.Controllers
 	{
 		public PizzaController()
 		{
-// https://docs.microsoft.com/en-us/learn/modules/build-web-api-aspnet-core/8-exercise-implement-crud
+			// https://docs.microsoft.com/en-us/learn/modules/build-web-api-aspnet-core/8-exercise-implement-crud
+			// next level
+			// https://docs.microsoft.com/en-us/learn/modules/persist-data-ef-core/
+			// https://docs.microsoft.com/en-us/learn/modules/build-blazor-webassembly-visual-studio-code/
 		}
 
 		// crud create read update delete
